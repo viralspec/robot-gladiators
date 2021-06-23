@@ -1,13 +1,16 @@
+// var playerName = 'John Cena';
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-var enemyNames = ["Roberto", "Amy Android", "Robo Trumble"];
+// You can also log multiple values at once like this
+console.log(playerName, playerAttack, playerHealth);
+
+
 var enemyHealth = 50;
 var enemyAttack = 12;
-
-
+var enemyNames = ["Roberto", "Amy Android", "Robo Trumble"];
 
 
 
@@ -46,6 +49,7 @@ var fight = function(enemyName) {
     } else {
       window.alert(playerName + " still has " + playerHealth + " health left.");
     }
+    
     // if player choses to skip
   } else if (promptFight === "skip" || promptFight === "SKIP") {
     // confirm player wants to skip
@@ -65,9 +69,9 @@ var fight = function(enemyName) {
   } else {
     window.alert("You need to pick a valid option. Try again!");
   }
-
 };
 
-for(var i = 0; i < enemyNames.length; i++) {
+// run fight function to start game
+for(var i = 0; i < enemyNames.length; i++){
   fight(enemyNames[i]);
 }
